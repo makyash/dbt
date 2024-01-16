@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: staging
+  - name: core
     database: analytics-workshop-411321
-    schema: tripdata
+    schema: dbt_ymakwana
     tables:
-      - name: greentrips
+      - name: stg_green_tripdata

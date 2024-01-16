@@ -1,4 +1,12 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
-select * from {{ source('staging', 'ny_taxi') }}
-limit 10
+select 
+    vendor_id,
+    pickup_datetime,
+    dropoff_datetime,
+    rate_code,
+    passenger_count,
+    trip_distance,
+    fare_amount,
+    cast(payment_type as numeric) as payment_type
+from {{ source('staging', 'greentrips') }}
