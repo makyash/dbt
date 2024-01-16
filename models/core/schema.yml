@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: core
+    database: analytics-workshop-411321
+    schema: dbt_ymakwana
+    tables:
+      - name: stg_green_tripdata
