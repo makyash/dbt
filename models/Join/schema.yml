@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: join
+    database: analytics-workshop-411321
+    schema: employee
+    tables:
+      - name: emp
+      - name: dept
